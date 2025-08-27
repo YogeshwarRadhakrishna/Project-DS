@@ -22,7 +22,7 @@ cd ~/denso_workspace/src
 source /opt/ros/humble/setup.bash
 source install/setup.bash
 ros2 launch denso_robot_bringup denso_robot_bringup.launch.py model:=vp6242m
-
+```
 ---
 
 ##  Terminal 2: Haption Device Service
@@ -34,7 +34,7 @@ sudo ./SvcHaptic_Desktop_6D_n41
 sudo tail -n 50 /var/log/SvcHaptic_Desktop_6D_n41.log # check log if haption device is port binded, if blocked continue next process and kill the bind port
 sudo lsof -i :5000
 sudo kill -9 <PID>
-
+```
 ---
 
 ##  Terminal 3: Virtuose Demo Tool
@@ -45,13 +45,13 @@ export LD_LIBRARY_PATH=.
 
 export VIRTUOSE_API_PATH=~/haption_workspace/VirtuoseDemo_v4.60_EN/Linux
 ./virtuoseDemo -mv localhost v6d35-45
-
+```
 ##  Terminal 4: Haption Main App
 
 ```bash
 export LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH
 sudo LD_LIBRARY_PATH=$LD_LIBRARY_PATH ./main
-
+```
 ---
 
 ##  Terminal 5: Haption ROS 2 Node
@@ -63,7 +63,7 @@ source /opt/ros/humble/setup.bash
 source install/setup.bash
 export LD_LIBRARY_PATH=~/haption_workspace/Haption/haption_api/lib
 ros2 run haption_ros2 haption_node
-
+```
 ---
 
 ##  Terminal 6: Echo Haption Pose Data
@@ -73,7 +73,7 @@ sudo bash
 colcon build --packages-select haption_ros2 --cmake-clean-cache
 source /opt/ros/humble/setup.bash
 ros2 topic echo --qos-durability transient_local /haption/pose
-
+```
 ---
 
 ##  Terminal 7: Denso-Haption Bridge (Trajectory)
@@ -85,7 +85,7 @@ source /opt/ros/humble/setup.bash
 source install/setup.bash
 colcon build --packages-select haption_denso_bridge
 ros2 run haption_denso_bridge haption_to_joint_trajectory
-
+```
 ---
 
 ##  Terminal 8: Load & Spawn Denso Controllers
@@ -150,6 +150,7 @@ python3 analyze.py
 📅 Updated: August 2025  
 
 ---
+
 
 
 
