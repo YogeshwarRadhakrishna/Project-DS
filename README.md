@@ -1,6 +1,6 @@
 # Denso Robot + Haption Integration (ROS 2 Humble)
 
-This document contains all-in-one setup and run instructions for integrating a **Denso VP6242M robot** with a **Haption 6D Desktop device** via **ROS 2 Humble**. Follow each section in order for full initialization and testing.
+This document contains setup and run instructions for integrating a **Denso VP6242M robot** with a **Haption 6D Desktop device** via **ROS 2 Humble**. Follow each section in order for full initialization and testing.
 
 ---
 
@@ -159,3 +159,4 @@ python3 analyze.py
 📅 Updated: August 2025  
 
 ---
+
