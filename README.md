@@ -14,8 +14,6 @@ This document contains setup and run instructions for integrating a **Denso VP62
 
 ---
 
-##  Terminal 1: Denso Robot Bring-Up
-
 ## Terminal 1: Denso Robot Bring-Up
 
 ```bash
@@ -24,34 +22,26 @@ cd ~/denso_workspace/src
 source /opt/ros/humble/setup.bash
 source install/setup.bash
 ros2 launch denso_robot_bringup denso_robot_bringup.launch.py model:=vp6242m
-
-
----
-
+```bash
 ##  Terminal 2: Haption Device Service
 
-\`\`\`bash
+```bash
 cd ~/haption_workspace/Haption
 sudo ./calibrate_Desktop_6D_n41
 sudo ./SvcHaptic_Desktop_6D_n41
 sudo tail -n 50 /var/log/SvcHaptic_Desktop_6D_n41.log # check log if haption device is port binded, if blocked continue next process and kill the bind port
 sudo lsof -i :5000
 sudo kill -9 <PID>
-\`\`\`
-
 ---
 
 ##  Terminal 3: Virtuose Demo Tool
 
-\`\`\`bash
+```bash
 export LD_LIBRARY_PATH=.
 ./virtuoseDemo -mv 127.0.0.1 v6dv4 1.0
 
 export VIRTUOSE_API_PATH=~/haption_workspace/VirtuoseDemo_v4.60_EN/Linux
 ./virtuoseDemo -mv localhost v6d35-45
-\`\`\`
-
----
 
 ##  Terminal 4: Haption Main App
 
@@ -161,6 +151,7 @@ python3 analyze.py
 📅 Updated: August 2025  
 
 ---
+
 
 
 
