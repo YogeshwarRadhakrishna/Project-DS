@@ -22,7 +22,7 @@ cd ~/denso_workspace/src
 source /opt/ros/humble/setup.bash
 source install/setup.bash
 ros2 launch denso_robot_bringup denso_robot_bringup.launch.py model:=vp6242m
-```bash
+
 ##  Terminal 2: Haption Device Service
 
 ```bash
@@ -151,6 +151,7 @@ python3 analyze.py
 📅 Updated: August 2025  
 
 ---
+
 
 
 
