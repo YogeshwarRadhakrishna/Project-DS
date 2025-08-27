@@ -103,24 +103,24 @@ ros2 control list_controllers
 
 ##  Optional: Run with Kalman Filter
 
-\`\`\`bash
+```bash
 ros2 run haption_denso_bridge haption_to_joint_trajectory --ros-args -p filter_mode:=Kalman
-\`\`\`
+```
 
 ---
 
 ##  Terminal 9: Visualization & Analysis
 
-\`\`\`bash
+```bash
 python3 live.py
 python3 analyze.py
-\`\`\`
+```
 
 ---
 
 ##  Recommended Directory Structure
 
-\`\`\`
+```bash
 ~/denso_workspace/
     └── src/
         ├── denso_robot_bringup/
@@ -129,7 +129,7 @@ python3 analyze.py
 ~/haption_workspace/
     ├── Haption/
     └── VirtuoseDemo_v4.60_EN/
-\`\`\`
+```
 
 ---
 
@@ -150,6 +150,7 @@ python3 analyze.py
 📅 Updated: August 2025  
 
 ---
+
 
 
 
