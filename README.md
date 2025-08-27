@@ -17,11 +17,11 @@ This document contains setup and run instructions for integrating a **Denso VP62
 ##  Terminal 1: Denso Robot Bring-Up
 
 \`\`\`bash
-cd ~/denso_workspace/src
-sudo bash
-source /opt/ros/humble/setup.bash
-source install/setup.bash
-ros2 launch denso_robot_bringup denso_robot_bringup.launch.py model:=vp6242m
+-cd ~/denso_workspace/src
+-sudo bash
+-source /opt/ros/humble/setup.bash
+-source install/setup.bash
+-ros2 launch denso_robot_bringup denso_robot_bringup.launch.py model:=vp6242m
 \`\`\`
 
 ---
@@ -159,4 +159,5 @@ python3 analyze.py
 📅 Updated: August 2025  
 
 ---
+
 
